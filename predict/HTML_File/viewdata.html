@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Graduation Admission Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2019/02/11/21/06/college-students-3990783_1280.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            color: darkblue;
+        }
+        .card-header {
+            background-color: rgba(0, 123, 255, 0.8);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+    </style>
 </head>
 <body>
 
-    <h2>Graduation Admission Prediction</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header text-white text-center">
+                    <h3>Graduation Admission Prediction</h3>
+                </div>
+                <div class="card-body">
+                    {% if prediction %}
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Prediction Result</h4>
+                            <p>{{ message }} {{ prediction }}</p>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info" role="alert">
+                            <h4 class="alert-heading">Information</h4>
+                            <p>No prediction available.</p>
+                        </div>
+                    {% endif %}
+                    <div class="text-center mt-4">
+                        <a href="{% url 'user' %}" class="btn btn-outline-primary">Go back to the form</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    {% if prediction %}
-        <p>{{ message }} {{ prediction }}</p>
-
-    {% else %}
-        <p>No prediction available.</p>
-    {% endif %}
-    <a href="{% url 'user' %}">Go back to the form</a>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+
