@@ -1,0 +1,2 @@
+# Graduation_Admission_Prediction_ML_Project
+Machine learning projects through Django
