@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('https://cdn.pixabay.com/photo/2017/08/01/01/28/people-2562626_1280.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+      
+    }
+
+    .my-large-text {
+        font-size: 24px; /* Adjust the font size as needed */
+      }
+  </style>
+</head>
+<body>
+    
+  <form class="container  my-large-text" method="get" action="{% url 'viewdata' %}">
+    <div class="alert alert-primary bg-success" role="alert">
+      <h2 class="text-center text-white">Graduate Admission Prediction</h2>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label text-white">GRE Score</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="GRE Score" placeholder="GRE Score">
+      </div>
+    </div>
+
+
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label text-white">TOEFL Score	</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="TOEFL Score" placeholder="TOEFL Score">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label text-white">University Rating</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="University Rating" placeholder="University Rating">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label text-white">SOP</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="SOP" placeholder="SOP">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-white">LOR</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="LOR" placeholder="LOR">
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-white">CGPA</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="CGPA" placeholder="CGPA">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-white">Research</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="Research" placeholder="Research">
+        </div>
+    </div>
+
+
+   
+    <button type="submit" class="btn btn-primary btn-lg btn-block btn-outline-warning">SUBMIT</button>
+  </form>
+</body>
+</html>

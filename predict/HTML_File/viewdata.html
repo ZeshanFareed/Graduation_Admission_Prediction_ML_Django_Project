@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graduation Admission Prediction</title>
+</head>
+<body>
+
+    <h2>Graduation Admission Prediction</h2>
+
+    {% if prediction %}
+        <p>{{ message }} {{ prediction }}</p>
+
+    {% else %}
+        <p>No prediction available.</p>
+    {% endif %}
+    <a href="{% url 'user' %}">Go back to the form</a>
+
+</body>
+</html>
